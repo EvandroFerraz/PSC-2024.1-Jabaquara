@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-public class Exercicio2 {
+public class Exercicio02 {
     public static void main(String[] args) {
         JOptionPane.showMessageDialog(null, "Exercício 2: Calcular raízes de uma equação de segundo grau");
         double a = Double.parseDouble(JOptionPane.showInputDialog("Digite o coeficiente a: "));
