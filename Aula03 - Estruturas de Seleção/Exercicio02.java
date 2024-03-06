@@ -1,3 +1,6 @@
+// 2- Ler coeficientes reais a, b e c de uma equação de segundo grau e exibir a(s) raiz(es), caso exista(m). Lembretes: Calcule o valor de delta. Se ele for negativo, não há
+// raízes.. Se for igual a zero, há uma única raiz. Se delta for maior do que zero, então há duas raízes.
+    
 import javax.swing.JOptionPane;
 
 public class Exercicio02 {
