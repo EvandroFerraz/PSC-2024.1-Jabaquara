@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-public class Exercicio1 {
+public class Exercicio01 {
     public static void main(String[] args) {
         JOptionPane.showMessageDialog(null, "Exercício 1: Verificar se um número é positivo, negativo ou neutro");
         int numero = Integer.parseInt(JOptionPane.showInputDialog("Digite um número inteiro: "));
