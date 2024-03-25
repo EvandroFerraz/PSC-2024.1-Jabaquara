@@ -1,7 +1,8 @@
 public class Carro {
     private int velocidade;
     private String modelo;
-    
+
+    // Construtor do Exercício 3
     public Carro(int velocidade, String modelo){
         this.velocidade = velocidade;
         this.modelo = modelo;
