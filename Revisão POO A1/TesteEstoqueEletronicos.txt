@@ -1,0 +1,83 @@
+package com.mycompany.testeestoqueeletronicos;
+
+import javax.swing.JOptionPane;
+
+public class TesteEstoqueEletronicos {
+
+    public static void main(String[] args) {
+       
+        //3.2
+        String nome = JOptionPane.showInputDialog(
+          "Digite o nome do primeiro objeto:"
+        );
+        int quantidade = Integer.parseInt(
+            JOptionPane.showInputDialog(
+               "Digite a quantidade em estoque" +
+               " do primeiro objeto:"
+            )
+        );
+        double preco = Double.parseDouble(
+           JOptionPane.showInputDialog(
+              "Digite o preço do primeiro objeto:"
+           )
+        );
+        
+        String nome2 = JOptionPane.showInputDialog(
+          "Digite o nome do segundo objeto:"
+        );
+        int quantidade2 = Integer.parseInt(
+            JOptionPane.showInputDialog(
+               "Digite a quantidade em estoque" +
+               " do segundo objeto:"
+            )
+        );
+        double preco2 = Double.parseDouble(
+           JOptionPane.showInputDialog(
+              "Digite o preço do segundo objeto:"
+           )
+        );
+        
+        /*celular.setNome(nome);
+        celular.setQuantidade(quantidade);
+        celular.setPreco(preco);
+        
+        televisao.setNome(nome2);
+        televisao.setQuantidade(quantidade2);
+        televisao.setPreco(preco2);*/
+        
+        //3.1 
+        Eletronico celular = new Eletronico(
+             nome, quantidade, preco
+        );
+        Eletronico televisao = new Eletronico(
+             nome2,quantidade2,preco2
+        );
+        
+        //3.3
+        JOptionPane.showMessageDialog(null,
+          "Nome: " + celular.getNome() + "\n" +
+          "Quantidade: " + celular.getQuantidade() +
+          "\nPreco: " + celular.getPreco());
+        
+        JOptionPane.showMessageDialog(null,
+          "Nome: " + televisao.getNome() + "\n" +
+          "Quantidade: " + televisao.getQuantidade() +
+          "\nPreco: " + televisao.getPreco());
+        
+        //3.4
+        celular.adicionarEstoque(10);
+        JOptionPane.showMessageDialog(null,
+          "Quantidade atualizada: " + 
+           celular.getQuantidade());
+        
+        //3.5
+        televisao.removerEstoque(5);
+        JOptionPane.showMessageDialog(null,
+          "Quantidade atualizada: " + 
+           televisao.getQuantidade());
+        
+        //3.6
+        celular.verificarDisponibilidade(20);
+        
+    }
+}

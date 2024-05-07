@@ -1,0 +1,71 @@
+package com.mycompany.testeestoqueeletronicos;
+
+import javax.swing.JOptionPane;
+
+public class Eletronico {   
+    // declarar todos atributos
+    private String nome;
+    private int quantidade;
+    private double preco;
+    
+    public Eletronico(String nomeInicial, int quantidadeInicial,
+        double precoInicial){
+        nome = nomeInicial;
+        quantidade = quantidadeInicial;
+        preco = precoInicial;    
+    }
+    
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public int getQuantidade() {
+        return quantidade;
+    }
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+    public double getPreco() {
+        return preco;
+    }
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+    
+    // métodos de nossa autoria
+    public void adicionarEstoque(int acrescimo){
+        quantidade = quantidade + acrescimo;
+    }
+    
+    public void removerEstoque(int decrescimo){
+        if(quantidade >= decrescimo){
+            quantidade = quantidade - decrescimo;
+        }else{
+            JOptionPane.showMessageDialog(null,
+              "Quantidade Disponível: " + quantidade + 
+              "Quantidade Remoção: " + decrescimo +
+              "\n Quantidade disponível insuficiente " +
+               "para remoção.");
+        }    
+    }
+    
+    public void verificarDisponibilidade(
+      int quantidadeComprada){
+      if(quantidade >= quantidadeComprada){
+          JOptionPane.showMessageDialog(null,
+            "Quantidade Disponível: " + quantidade +
+            "Quantidade a comprar: " + quantidadeComprada +
+            "\n Estoque DISPONÍVEL!!"
+          );
+      }else{ // quantidade < quantidadeComprada
+          JOptionPane.showMessageDialog(null,
+            "Quantidade Disponível: " + quantidade +
+            "Quantidade a comprar: " + quantidadeComprada +
+            "\n Estoque INDISPONÍVEL!!"
+          );
+      } 
+        
+    }  
+}
